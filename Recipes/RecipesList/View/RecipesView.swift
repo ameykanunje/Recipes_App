@@ -46,8 +46,9 @@ struct RecipesView: View {
                 }
             case .inactive:
                 print("App became inactive")
+                vm.cleanData()
             case .background:
-                //print("App entered background, clearing image cache")
+                print("App entered background, clearing image cache")
                 vm.cleanData()
             @unknown default:
                 break
